@@ -1,0 +1,88 @@
+<div class="container">
+  <div class='row'>
+    <a href="#" class='btn btn-primary' onclick="window.history.back();return false;"><i class='fa fa-backward'></i> Back</a>
+  </div>
+  <div class='row'>
+    <div class="panel panel-default">
+      <div class="panel-heading"><span class="fa fa-caret-square-o-right"></span> Layer Edit </div>
+      <div class="panel-body">
+        <form method="POST" class="" ng-submit="update()">
+          <div class="form-group">
+            <label for="widget" class="control-label">Widget:</label> Image
+            <button type="button" class='btn btn-danger pull-right'>Delete</button>
+          </div>
+          <div class="form-horizontal">
+            <div class='col-lg-4 thumbnail'>
+              <div class="form-group">
+                <label for="x" class="col-sm-1 control-label">X</label>
+                <div class="col-sm-11">
+                  <input type="text" ng-model="x" class="form-control" id="x" placeholder="X">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="y" class="col-sm-1 control-label">Y</label>
+                <div class="col-sm-11">
+                  <input type="text" ng-model="y" class="form-control" id="y" placeholder="Y">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="h" class="col-sm-1 control-label">H</label>
+                <div class="col-sm-11">
+                  <input type="text" ng-model="h" class="form-control" id="h" placeholder="X">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="w" class="col-sm-1 control-label">W</label>
+                <div class="col-sm-11">
+                  <input type="text" ng-model="w" class="form-control" id="w" placeholder="W">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="position" class="col-sm-3 control-label">Position</label>
+                <div class="col-sm-9">
+                  <input type="text" ng-model="position" class="form-control" id="position" placeholder="Position">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="duration" class="col-sm-3 control-label">Duration</label>
+                <div class="col-sm-9">
+                  <input type="text" ng-model="duration" class="form-control" id="duration" placeholder="Duration">
+                </div>
+              </div>
+            </div>
+            <div class='col-lg-8 thumbnail layer-edit-drag-drop'>
+              <p class='text-center'> Drag + Drop Position</p>
+            </div>
+          </div>
+
+          
+
+          <div class="form-group">
+            <div id="dropzone" class='col-sm-12'>
+              <p>Drag Drop <br> <b>Upload New Image</b></p>
+              <!-- <progress id="upload-progress" min="0" max="100" value="0"></progress> -->
+              <!-- <div id="preview"></div> -->
+              <div id="upload" class="hidden">
+                <label>Drag and drop not supported, use this field:</label>
+                <input type="file">
+              </div>
+            </div>
+          </div>
+
+          <p class="text-center" ng-show="loading">
+            <span class="fa fa-spinner fa-spin fa-3x"></span>
+          </p>
+          <div class="form-group">
+            <button class="btn btn btn-primary"><i class="fa fa-floppy-o"></i> Update</button>
+            <button type='button' ng-click="delete()" class="btn btn btn-danger"><i class="fa fa-times"></i> Delete</button>
+          </div>
+        </form> <!-- password form End Here-->
+      </div> <!-- panel body End Here-->
+    </div> <!-- panel End Here-->
+  </div> <!-- row End Here-->
+</div> <!-- container End Here-->

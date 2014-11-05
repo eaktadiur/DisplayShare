@@ -1,0 +1,57 @@
+<div class="container">
+  <div class='row'>
+    <a href="#" class='btn btn-primary' onclick="window.history.back();return false;"><i class='fa fa-backward'></i> Back</a>
+  </div>
+  <div class='row'>
+    <div class="panel panel-default">
+      <div class="panel-heading"><span class="fa fa-caret-square-o-right"></span> Add Layer Details </div>
+      <div class="panel-body">
+        <form method="POST" class="" ng-submit="add()">
+          <div class="form-group">
+            <label for="order" class="control-label">Order</label> 
+            <input type="text" ng-model="order" id="order" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label for="media" class="control-label">Media</label>
+            <input type="text" ng-model="media" id="media" class="form-control"/>
+          </div>
+
+          <div class="form-group">
+            <label for="content" class="control-label">Content</label>
+            <input type="text" ng-model="content" id="content" class="form-control"/>
+          </div>
+
+          <div class="form-group">
+            <label for="x" class="control-label">X</label>
+            <input type="text" ng-model="x" id="x" class=""/>
+
+            <label for="y" class="control-label">Y</label>
+            <input type="text" ng-model="y" id="y" class=""/>
+
+            <label for="h" class="control-label">H</label>
+            <input type="text" ng-model="h" id="h" class=""/>
+
+            <label for="w" class="control-label">W</label>
+            <input type="text" ng-model="w" id="w" class=""/>
+          </div>
+
+          <div class="form-group">
+            <label for="position" class="control-label">Position</label>
+            <input type="text" ng-model="position" id="position" class="form-control"/>
+          </div>
+
+          <div class="form-group">
+            <label for="duration" class="control-label">Duration</label>
+            <input type="text" ng-model="duration" id="duration" class="form-control"/>
+          </div>
+          <p class="text-center" ng-show="loading">
+            <span class="fa fa-spinner fa-spin fa-3x"></span>
+          </p>
+          <div class="form-group">
+            <button class="btn btn btn-primary"><i class="fa fa-floppy-o"></i> Add New</button>
+          </div>
+        </form> <!-- password form End Here-->
+      </div> <!-- panel body End Here-->
+    </div> <!-- panel End Here-->
+  </div> <!-- row End Here-->
+</div> <!-- container End Here-->

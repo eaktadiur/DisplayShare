@@ -1,0 +1,8 @@
+Options +FollowSymLinks -Indexes -MultiViews
+
+RewriteEngine on
+
+RewriteBase /displayshare/core/
+
+RewriteRule ^(.*)$ http://localhost:3001/$1 [P,L] 
+

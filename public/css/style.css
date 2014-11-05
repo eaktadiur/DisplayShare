@@ -1,0 +1,64 @@
+.mainContainer{
+	margin-top: 100px;
+}
+
+.navbar-nav > li > a#dropdownMenu {
+  padding-bottom: 0px;
+  padding-top: 10px;
+}
+.table-header-search{
+	margin-bottom: 10px;
+}
+.top-buffer { margin-top:80px; }
+
+.parent { 
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+
+/*upload file*/
+
+#dropzone {
+	background-color: #eee;
+	outline: 1px solid #ccc;
+	text-align: center;
+	border: 10px solid transparent;
+	height: 120px;
+}
+
+#dropzone.hover {
+	border: 10px dashed #0c0;
+}
+
+progress {
+	width: 100%;
+}
+
+#preview img {
+	display: block;
+	margin: 10px auto;
+	max-width: 200px;
+}
+
+.hidden {
+	display: none !important;
+}
+
+
+/*--------------------------*/
+.advertisement-thumb {height: 120px; margin: 0px 10px;}
+.drop-zone-drop-down {position: relative; bottom: -40px;}
+.layer-edit-drag-drop{height: 305px;}
+.adv-widget{min-height: 100px; min-width: 100px; vertical-align: middle;}
+
+

@@ -1,0 +1,117 @@
+<div class="container">
+  <div class='row'>
+    <form method="POST" class="" ng-submit="userUpdate()">
+      <a href="#" class='btn btn-primary' onclick="window.history.back();return false;"><i class='fa fa-backward'></i> Back</a>
+      <button class="btn btn btn-primary"><i class="fa fa-save"></i> Update</button>
+      <div class="panel panel-default">
+        <div class="panel-heading"><span class="fa fa-caret-square-o-right"></span> Edit Campaign 
+      </div>
+        <div class="panel-body">
+          <div class="form-group">
+            <label for="name" class="control-label">Name</label> 
+            <input type="text" ng-model="name" id="name" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label for="duration" class="control-label">Duration</label>
+            <input type="text" ng-model="duration" id="duration" class="form-control"/>
+          </div>
+
+          <div class="form-group">
+            <label for="start_date" class="control-label">Start Date</label>
+            <input type="text" ng-model="start_date" id="start_date" class="form-control"/>
+          </div>
+
+          <div class="form-group">
+            <label for="end_date" class="control-label">End Date</label>
+            <input type="text" ng-model="end_date" id="end_date" class="form-control"/>
+          </div>
+
+          <div class="">
+
+
+            <h2>Advertisement</h2>
+            <hr>
+            <div class='col-lg-2 advertisement-thumb' ng-repeat="layder in layers">
+              <a href="#/campaign/{{campaignId}}/layer/{{layder._id}}" class='parent'>
+                <img ng-src="{{layer.widget}}" alt='widget' class='img-thumbnail adv-widget'>
+              </a>
+            </div>
+            <div class='col-lg-2 thumbnail advertisement-thumb'>
+              <p class='text-center'>Drop Zone</p>
+              <select class="form-control drop-zone-drop-down">
+                <option>Widget</option>
+                <option>Image</option>
+                <option>Content</option>
+                <option>iframe</option>
+                <option>Weather</option>
+                <option>News</option>
+                <option>Video</option>
+              </select>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <p class="text-center" ng-show="loading">
+            <span class="fa fa-spinner fa-spin fa-3x"></span>
+          </p>
+          <div class="form-group">
+            <br>
+            <button class="btn btn btn-primary"><i class="fa fa-save"></i> Update</button>
+            <a href="#" class='btn btn-primary pull-right' onclick="window.history.back();return false;"><i class='fa fa-backward'></i> Back</a>
+          </div>
+        </div> <!-- panel body End Here-->
+      </div> <!-- panel End Here-->
+    </form> <!-- password form End Here-->
+  </div> <!-- row end here -->
+  
+   <div class='row'>
+    <div class="panel panel-default">
+      <div class="panel-heading"><span class="fa fa-th-large"></span> Display List 
+        <!-- <a href="#/admin/display/add" class='btn btn-primary'><i class='fa fa-plus'></i> Add New</a> -->
+        <span class="badge pull-right">{{displays.length}}</span>
+      </div>
+      <div class="panel-body">
+        <div class="table-responsive">
+          <input type="text" class='table-header-search form-control' ng-model="searchText" placeholder='Seach By Name'/>
+          <table class='table table-striped table-hover table-condensed'>
+            <tr>
+              <thead>
+                <th>Name</th>
+                <th>Logo</th>
+                <th>Code</th>
+                <th>Scope</th>
+                <th>Layout</th>
+                <th>Contact</th>
+                <th>Lat</th>
+                <th>Lng</th>
+                <th>Url</th>
+                <th>Created</th>
+                <th>Credits</th>
+                <th>Action</th>
+              </thead>
+            </tr>
+            <tbody>
+              <tr ng-repeat="display in displayByUser | limitTo:100 | filter:searchText">
+                <td>{{display.name}}</td>
+                <td><img ng-src="{{display.logo}}" alt='Logo' width='50'></td>
+                <td>{{display.code}}</td>
+                <td>{{display.scope}}</td>
+                <td>{{display.layout}}</td>
+                <td>{{display.contact}}</td>
+                <td>{{display.lat}}</td>
+                <td>{{display.lng}}</td>
+                <td>{{display.url}}</td>
+                <td>{{display.created}}</td>
+                <td>{{display.credits.length}}</td>
+                <td>
+                 <!--  <a href="#/admin/display/view/{{display._id}}"><i class='fa fa-eye'></i></a> 
+                  <a href="#/admin/display/edit/{{display._id}}"><i class='fa fa-pencil-square-o'></i></a> 
+                  <a href="#/admin/display/delete/{{display._id}}"><i class='fa fa-times'></i></a>  -->
+                </td>
+              </tr> <!-- ng-repeat End Here-->
+            </tbody> <!-- table body End Here-->
+          </table> <!-- table End Here-->
+        </div> <!-- table responsive End Here-->
+      </div> <!-- panel body End Here-->
+    </div> <!-- panel End Here-->
+  </div> <!-- row End Here-->
+</div> <!-- container End Here-->

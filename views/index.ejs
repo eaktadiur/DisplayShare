@@ -1,0 +1,68 @@
+<html ng-app="dsApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Display Share App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <% include layout/menu %>
+
+<!--     <div id="dropzone">
+      <p>Drag and drop images from your desktop.</p>
+    </div>
+    <progress id="upload-progress" min="0" max="100" value="0"></progress>
+    <div id="preview"></div>
+    <div id="upload" class="hidden">
+      <label>Drag and drop not supported, use this field:</label>
+      <input type="file">
+    </div> -->
+    
+    <div class=''>
+      <div ng-view class="fadeZoom"></div>
+    </div>
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0-beta.13/angular.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0-beta.13/angular-messages.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0-beta.13/angular-resource.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0-beta.13/angular-route.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0-beta.13/angular-animate.js"></script>
+  <script src="//oss.maxcdn.com/angular.strap/2.0.0/angular-strap.min.js"></script>
+  <script src="//oss.maxcdn.com/angular.strap/2.0.0/angular-strap.tpl.min.js"></script>
+
+  <script src="lib/angular-animate.min.js"></script>
+  
+  <script src="app.js"></script>
+
+  <script src="controllers/users.js"></script>
+  <script src="services/users.js"></script> 
+
+  <script src="controllers/campaigns.js"></script>
+  <script src="services/campaigns.js"></script>
+   
+  <script src="services/layer.js"></script>
+  <script src="controllers/layer.js"></script> 
+
+  <script src="services/display.js"></script>
+  <script src="controllers/display.js"></script> 
+
+  <script src="services/credit.js"></script>
+  <script src="controllers/credit.js"></script> 
+  
+  <script src="controllers/profile.js"></script>
+  <script src="services/profile.js"></script>  
+
+  <script src="controllers/index.js"></script>
+  <script src="services/index.js"></script>  
+
+  <script src="controllers/contact.js"></script>
+  <script src="services/contact.js"></script>  
+
+
+  </body>
+</html>
